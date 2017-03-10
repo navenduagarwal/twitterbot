@@ -13,9 +13,18 @@ stream.on('tweet', tweetEvent);
 
 
 function tweetEvent(eventMsg){
-	var fs = require('fs');
-	var json = JSON.stringify(eventMsg,null,2);
-	fs.writeFile("tweet.json",json);
+	// var fs = require('fs');
+	// var json = JSON.stringify(eventMsg,null,2);
+	// fs.writeFile("tweet.json",json);
+	var replyto = eventMsg.in_reply_to_screen_name;
+	var text = eventMsg.text;
+	var tweetFrom = eventMsg.user.screen_name;
+
+	if(replyto === 'gstganit'){
+		var newtweet = '@' + tweetFrom + ' thank you for tweeting me! #testingsparshik';
+		tweetIt(newtweet);
+	}
+
 }
 
 function followed(eventMsg){
