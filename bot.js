@@ -4,22 +4,32 @@ var Twit = require('twit');
 var config = require('./config');
 
 var T = new Twit(config);
+// Setting up a user stream
+var stream = T.stream('user');
 
-tweetIt();
-setInterval(tweetIt,1000*20);
+//Antime someone follows me
+stream.on('follow', followed);
 
-function tweetIt(){
+function followed(eventMsg){
+	var name = eventMsg.source.name;
+	var screenName = eventMsg.source.screen_name;
+	tweetIt('@' + screenName + ' do you like GST');
+}
 
-	var r = Math.floor(Math.random()*100);
+//setInterval(tweetIt, 1000 * 20);
 
-	var params = { status: 'hello world!' + r };
+function tweetIt(txt) {
 
-	T.post('statuses/update', params, gotData)
+	// var r = Math.floor(Math.random() * 100);
 
-function gotData(err, data, response) {
-	// var tweets = data.statuses;
-	// for (var i = 0; i < tweets.length; i++){
-		if(err){
+	var tweets = { status: txt};
+
+	T.post('statuses/update', tweets, gotData)
+
+	function gotData(err, data, response) {
+		// var tweets = data.statuses;
+		// for (var i = 0; i < tweets.length; i++){
+		if (err) {
 			console.log("Something went wrong");
 		} else {
 			console.log("It worked");
