@@ -6,35 +6,25 @@ var config = require('./config');
 var T = new Twit(config);
 
 tweetIt();
+setInterval(tweetIt,1000*20);
 
 function tweetIt(){
-var params = { status: 'hello world!' };
 
-T.post('statuses/update', params, gotData)
+	var r = Math.floor(Math.random()*100);
 
-// console.log(config);
-// T.get('search/tweets',params , gotData);
+	var params = { status: 'hello world!' + r };
+
+	T.post('statuses/update', params, gotData)
 
 function gotData(err, data, response) {
 	// var tweets = data.statuses;
 	// for (var i = 0; i < tweets.length; i++){
 		if(err){
 			console.log("Something went wrong");
-				} else {
+		} else {
 			console.log("It worked");
-				}
-		  console.log(data);
-		};
+		}
+		// console.log(data);
+	};
 
-	}
-	// }
-
-// var stream = T.stream('statuses/filter', { track: '#apple', language: 'en' })
-
-// stream.on('tweet', function (tweet) {
-//   console.log(tweet)
-// })
-
-// stream.on('direct_message', function (directMsg) {
-//   //...
-// })
+};
