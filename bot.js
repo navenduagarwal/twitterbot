@@ -7,8 +7,16 @@ var T = new Twit(config);
 // Setting up a user stream
 var stream = T.stream('user');
 
+
 //Antime someone follows me
-stream.on('follow', followed);
+stream.on('tweet', tweetEvent);
+
+
+function tweetEvent(eventMsg){
+	var fs = require('fs');
+	var json = JSON.stringify(eventMsg,null,2);
+	fs.writeFile("tweet.json",json);
+}
 
 function followed(eventMsg){
 	var name = eventMsg.source.name;
