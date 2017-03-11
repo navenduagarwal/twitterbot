@@ -1,0 +1,45 @@
+{
+  "messages": [
+    {
+      "id": "Lg8XcVhoipML9ks0CyNEiN|0000001",
+      "conversationId": "Lg8XcVhoipML9ks0CyNEiN",
+      "created": "2017-03-11T11:19:16.0919243Z",
+      "from": "robobanker",
+      "text": "Hello there,I am iBankingBot! My purpose is to help make your life easier when it comes to your banking needs.",
+      "images": [],
+      "attachments": [],
+      "eTag": "W/\"datetime'2017-03-11T11%3A19%3A15.0913989Z'\""
+    },
+    {
+      "id": "Lg8XcVhoipML9ks0CyNEiN|0000002",
+      "conversationId": "Lg8XcVhoipML9ks0CyNEiN",
+      "created": "2017-03-11T11:19:16.3759177Z",
+      "from": "robobanker",
+      "text": "Please confirm your name?",
+      "images": [],
+      "attachments": [],
+      "eTag": "W/\"datetime'2017-03-11T11%3A19%3A16.4477965Z'\""
+    },
+    {
+      "id": "Lg8XcVhoipML9ks0CyNEiN|0000003",
+      "conversationId": "Lg8XcVhoipML9ks0CyNEiN",
+      "created": "2017-03-11T11:19:20.2763513Z",
+      "from": "8LJORkU6HKJ",
+      "text": "Hey navendu",
+      "images": [],
+      "attachments": [],
+      "eTag": "W/\"datetime'2017-03-11T11%3A19%3A22.1710058Z'\""
+    },
+    {
+      "id": "Lg8XcVhoipML9ks0CyNEiN|0000004",
+      "conversationId": "Lg8XcVhoipML9ks0CyNEiN",
+      "created": "2017-03-11T11:19:23.2335636Z",
+      "from": "robobanker",
+      "text": "Hello there,I am iBankingBot! My purpose is to help make your life easier when it comes to your banking needs.",
+      "images": [],
+      "attachments": [],
+      "eTag": "W/\"datetime'2017-03-11T11%3A19%3A23.0704971Z'\""
+    }
+  ],
+  "watermark": "4"
+}

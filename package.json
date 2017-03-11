@@ -12,6 +12,7 @@
   "author": "Navendu",
   "license": "MIT",
   "dependencies": {
-    "twit": "^2.2.5"
+    "twit": "^2.2.5",
+    "unirest": "^0.5.1"
   }
 }
