@@ -26,6 +26,7 @@ function startBotConversation() {
 		global.token = res.body.token;
 		global.convId = res.body.conversationId;
 		console.log("token " + global.token + "\n Conv " + global.convId);
+		getBotReply();
 		startTwitterListener();
 	});
 };
